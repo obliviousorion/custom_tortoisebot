@@ -83,8 +83,8 @@
 Clone the repository into your workspace,
 
 ```py
-cd ~/ros2_ws/src # Assuming ros2_ws is the name of the workspace
-git clone https://github.com/rigbetellabs/tortoisebot_pro.git
+cd ~/ros2_ws # Assuming ros2_ws is the name of the workspace
+git clone https://github.com/obliviousorion/custom_tortoisebot.git
 ```
 
 Build the workspace,
