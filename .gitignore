@@ -1,9 +1,3 @@
-# Ignore build artifacts and logs
 build/
 install/
 log/
-*.pyc
-*.swp
-*.swo
-*.bak
-*.DS_Store
