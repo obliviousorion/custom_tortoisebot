@@ -18,12 +18,20 @@ def generate_launch_description():
   exploration = LaunchConfiguration('exploration', default='True')
 
   use_sim_time = LaunchConfiguration('use_sim_time', default='true')
+  # Previous map path (commented out):
+  # map_dir = LaunchConfiguration(
+  #     'map',
+  #     default=os.path.join(
+  #         get_package_share_directory('tortoisebotpro_navigation'),
+  #         'maps',
+  #         'room2.yaml'))
+
+  # Use default_map.yaml from workspace root (relative path)
   map_dir = LaunchConfiguration(
       'map',
       default=os.path.join(
-          get_package_share_directory('tortoisebotpro_navigation'),
-          'maps',
-          'room2.yaml'))
+          os.getcwd(),
+          'default_map.yaml'))
 
   param_file_name = 'nav2_params.yaml'
   param_dir = LaunchConfiguration(
