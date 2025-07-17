@@ -12,7 +12,7 @@ def generate_launch_description():
   prefix_address = get_package_share_directory('tortoisebotpro_navigation') 
   params_file= os.path.join(prefix_address, 'config', 'nav2_params.yaml')
 
-  cartographer_launch_dir = os.path.join(get_package_share_directory('tortoisebotpro_slam'), 'launch')
+  # cartographer_launch_dir = os.path.join(get_package_share_directory('tortoisebotpro_slam'), 'launch')
   params_file_robot = os.path.join(get_package_share_directory('tortoisebotpro_slam'), 'config', 'slam.lua')
 
   exploration = LaunchConfiguration('exploration', default='True')
@@ -48,15 +48,15 @@ def generate_launch_description():
                 'use_sim_time': use_sim_time,
                 'params_file': param_dir}.items(),
         )
-  cartographer_launch_cmd = IncludeLaunchDescription(
-        PythonLaunchDescriptionSource(
-            os.path.join(cartographer_launch_dir, 'cartographer.launch.py')),
-        launch_arguments={'params_file': params_file_robot,
-                          'exploration': exploration,
-                          'use_sim_time': use_sim_time}.items())
+  # cartographer_launch_cmd = IncludeLaunchDescription(
+  #       PythonLaunchDescriptionSource(
+  #           os.path.join(cartographer_launch_dir, 'cartographer.launch.py')),
+  #       launch_arguments={'params_file': params_file_robot,
+  #                         'exploration': exploration,
+  #                         'use_sim_time': use_sim_time}.items())
 
   return LaunchDescription([
     navigation_launch_cmd,
-    cartographer_launch_cmd   
+    # cartographer_launch_cmd   
   ]
 )
