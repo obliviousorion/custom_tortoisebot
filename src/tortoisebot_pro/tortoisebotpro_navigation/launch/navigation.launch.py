@@ -24,7 +24,7 @@ def generate_launch_description():
       default=os.path.join(
           get_package_share_directory('tortoisebotpro_navigation'),
           'maps',
-          'defaul_map.yaml'))
+          'default_map.yaml'))
 
   # Use default_map.yaml from workspace root (relative path)
   # map_dir = LaunchConfiguration(
