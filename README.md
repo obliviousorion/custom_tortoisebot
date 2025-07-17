@@ -80,22 +80,22 @@
 
 ## 1. Installation
 
-Clone the repository for the workspace
+Clone the repository into your workspace,
 
 ```py
-
-git clone https://github.com/obliviousorion/custom_tortoisebot.git
+cd ~/ros2_ws/src # Assuming ros2_ws is the name of the workspace
+git clone https://github.com/rigbetellabs/tortoisebot_pro.git
 ```
 
 Build the workspace,
 ```py
-cd ~/custom_tortoisebot/
+cd ~/ros2_ws/
 colcon build
 ```
 
 Installation of dependent packages,
 ```py
-cd ~/custom_tortoisebot/src/
+cd ~/ros2_ws/src/
 cat requirements.txt | xargs sudo apt-get install -y 
 # This installs all the packages mentioned in the requirements.txt
 ```
@@ -104,7 +104,7 @@ cat requirements.txt | xargs sudo apt-get install -y
 > Check if you already have the lidar packages installed; if not, get the packages from repos below.
 
 ```py
-cd ~/custom_tortoisebot/src/
+cd ~/ros2_ws/src/
 git clone https://github.com/rigbetellabs/ydlidar_ros.git
 ```
 
